@@ -164,7 +164,7 @@ public class JobSource extends AbstractSourceJobSource implements Source<MantisS
     }
 
     protected static List<TargetInfo> parseTargetInfo(String targetListStr) {
-        List<TargetInfo> targetList = new ArrayList<TargetInfo>();
+        List<TargetInfo> targetList = new ArrayList<>();
         JsonObject requestObj = (JsonObject) parser.parse(targetListStr);
         JsonArray arr = requestObj.get("targets").getAsJsonArray();
 
@@ -217,9 +217,9 @@ public class JobSource extends AbstractSourceJobSource implements Source<MantisS
         private String criterion;
         private String clientId;
         private int samplePerSec = -1;
-        private boolean isBroadcastMode = false;
-        private boolean enableMetaMessages = false;
-        private boolean enableCompressedBinary = false;
+        private boolean isBroadcastMode;
+        private boolean enableMetaMessages;
+        private boolean enableCompressedBinary;
 
         public TargetInfoBuilder() {
         }
