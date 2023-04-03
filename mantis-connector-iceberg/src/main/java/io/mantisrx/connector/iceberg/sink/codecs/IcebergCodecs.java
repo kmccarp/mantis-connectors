@@ -50,7 +50,7 @@ public class IcebergCodecs {
         return new DataFileCodec();
     }
 
-    private static class RecordCodec<T> implements Codec<T> {
+    private static final class RecordCodec<T> implements Codec<T> {
 
         private final IcebergEncoder<T> encoder;
         private final IcebergDecoder<T> decoder;
