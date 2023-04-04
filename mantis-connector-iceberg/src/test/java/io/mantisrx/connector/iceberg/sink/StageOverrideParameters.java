@@ -25,7 +25,7 @@ import io.mantisrx.connector.iceberg.sink.config.SinkProperties;
 import io.mantisrx.connector.iceberg.sink.writer.config.WriterProperties;
 import io.mantisrx.runtime.parameter.Parameters;
 
-public class StageOverrideParameters {
+public final class StageOverrideParameters {
 
     private StageOverrideParameters() {
     }
